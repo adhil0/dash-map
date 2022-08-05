@@ -3,7 +3,7 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
-
+server = app.server
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv')
 df['Date'] = pd.to_datetime(df['Date'], utc=True)
